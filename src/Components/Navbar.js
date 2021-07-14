@@ -1,10 +1,11 @@
 import React from 'react';
 import { Filter } from './Filter';
 // import PropTypes from 'prop-types';
+import '../Assets/Stylesheets/Navbar.css';
 
 const Navbar = () => (
-  <div>
-    <h1>COVID-19 Data</h1>
+  <div className="container">
+    <h1 className="title">COVID-19 Data</h1>
     <Filter />
   </div>
 );

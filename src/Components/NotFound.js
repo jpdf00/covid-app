@@ -1,10 +1,8 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import '../Assets/Stylesheets/NotFound.css';
 
 const NotFound = () => (
-  <div>
-    <p>Not Found</p>
-  </div>
+  <div className="NotFound" />
 );
 
 export default NotFound;
