@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 import '../Assets/Stylesheets/Earth.css';
 
 const Earth = (props) => {
-  const { globe } = props;
+  const { globe, filter } = props;
   const d = new Date(globe.Date);
-  const test = 'confirmed';
 
-  function filter() {
-    if (test === 'confirmed') {
+  function changeStats() {
+    if (filter === 'Confirmed') {
       return globe.TotalConfirmed;
     }
-    if (test === 'deaths') {
+    if (filter === 'Deaths') {
       return globe.TotalDeaths;
     }
-    if (test === 'recovered') {
+    if (filter === 'Recovered') {
       return globe.TotalRecovered;
     }
     return 0;
@@ -26,30 +25,16 @@ const Earth = (props) => {
 
       <p className="topText">
         {
-          `Total ${test}:
-          ${filter()}`
+          `Total ${filter}:
+          ${changeStats()}`
         }
       </p>
-      {/*
-      <p className="topText">
-        {
-          `Total Deaths:
-          ${globe.TotalDeaths}`
-        }
-      </p>
-      <p className="topText">
-        {
-          `Total Recovered:
-          ${globe.TotalRecovered}`
-        }
-      </p>
-      */}
     </div>
   );
 };
 
 Earth.propTypes = {
-  globe: PropTypes.arrayOf(PropTypes.shape({
+  globe: PropTypes.shape({
     NewConfirmed: PropTypes.number.isRequired,
     TotalConfirmed: PropTypes.number.isRequired,
     NewDeaths: PropTypes.number.isRequired,
@@ -57,7 +42,8 @@ Earth.propTypes = {
     NewRecovered: PropTypes.number.isRequired,
     TotalRecovered: PropTypes.number.isRequired,
     Date: PropTypes.string.isRequired,
-  })).isRequired,
+  }).isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default Earth;

@@ -4,10 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './Components/App';
 import './Assets/Stylesheets/index.css';
+import rootReducer from './Reducers/index';
 
 const initialState = {
   country: 'brazil',
   filter: 'Confirmed',
+  countryData: [],
+  globalData: {},
+  dayData: [{ Country: 'Brazil' }],
 };
 
 const store = createStore(rootReducer, initialState);

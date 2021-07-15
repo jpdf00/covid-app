@@ -1,18 +1,29 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeFilter } from '../Actions/index';
 import '../Assets/Stylesheets/Filter.css';
 
 const STATUS = ['Confirmed', 'Deaths', 'Recovered'];
 
-const Filter = () => (
-  <select name="filter" className="filter">
-    {STATUS.map((category) => (
-      <option key={uuidv4()} value={category}>
-        {category}
-      </option>
-    ))}
-  </select>
-);
+const Filter = () => {
+  const filter = useSelector((state) => state.filter);
+  const dispatch = useDispatch();
 
-export { STATUS, Filter };
+  const handleFilterChange = (e) => {
+    const data = e.target.value;
+    dispatch(changeFilter(data));
+  };
+
+  return (
+    <select name="filter" className="filter" value={filter} onChange={handleFilterChange}>
+      {STATUS.map((category) => (
+        <option key={uuidv4()} value={category}>
+          {category}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export default Filter;

@@ -2,7 +2,10 @@
 
 h2,
 h3,
-p {
+p,
+a {
+  text-decoration: none;
+  color: #fff;
   margin: 0;
 }
 
@@ -14,25 +17,25 @@ p {
   justify-content: space-between;
   padding-top: 125px;
   color: #fff;
-  background: linear-gradient(180deg, rgba(24,26,54,1) 0%, rgba(51,73,111,1) 50%, rgba(24,26,54,1) 100%);
+  background: linear-gradient(180deg, rgba(24, 26, 54, 1) 0%, rgba(51, 73, 111, 1) 50%, rgba(24, 26, 54, 1) 100%);
   border-radius: 0 0 5px 5px;
   font-family: 'Roboto Slab', serif;
 }
 
-.topTitle{
+.topTitle {
   font-family: 'Roboto Slab', serif;
   align-self: center;
   font-size: 16px;
   margin-top: 10px;
 }
 
-.topText{
+.topText {
   font-family: 'Roboto Slab', serif;
   align-self: center;
   margin-bottom: 10px;
 }
 
-.card{
+.card {
   width: 100vw;
   height: 55px;
   display: flex;
@@ -40,6 +43,6 @@ p {
   justify-content: space-between;
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(180deg, rgba(24,26,54,1) 0%, rgba(51,73,111,1) 50%, rgba(24,26,54,1) 100%);
+  background: linear-gradient(180deg, rgba(24, 26, 54, 1) 0%, rgba(51, 73, 111, 1) 50%, rgba(24, 26, 54, 1) 100%);
   border-radius: 5px;
 }

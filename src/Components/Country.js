@@ -4,30 +4,30 @@ import { Link } from 'react-router-dom';
 import '../Assets/Stylesheets/Earth.css';
 
 const Country = (props) => {
-  const { country } = props;
-  const test = 'confirmed';
+  const { country, filter, handleCountryChange } = props;
 
-  function filter() {
-    if (test === 'confirmed') {
+  function changeStats() {
+    if (filter === 'Confirmed') {
       return country.TotalConfirmed;
     }
-    if (test === 'deaths') {
+    if (filter === 'Deaths') {
       return country.TotalDeaths;
     }
-    if (test === 'recovered') {
+    if (filter === 'Recovered') {
       return country.TotalRecovered;
     }
     return 0;
   }
 
   return (
-    <Link to="/Daylies">
+    <Link to="/Daylies" onClick={() => handleCountryChange(country.Slug)}>
       <div className="card">
         <h3 className="topTitle">{country.Country}</h3>
+
         <p className="topText">
           {
-            `Total ${test}:
-            ${filter()}`
+            `Total ${filter}:
+            ${changeStats()}`
           }
         </p>
       </div>
@@ -36,7 +36,7 @@ const Country = (props) => {
 };
 
 Country.propTypes = {
-  country: PropTypes.arrayOf(PropTypes.shape({
+  country: PropTypes.shape({
     ID: PropTypes.string.isRequired,
     Country: PropTypes.string.isRequired,
     CountryCode: PropTypes.string.isRequired,
@@ -48,7 +48,9 @@ Country.propTypes = {
     NewRecovered: PropTypes.number.isRequired,
     TotalRecovered: PropTypes.number.isRequired,
     Date: PropTypes.string.isRequired,
-  })).isRequired,
+  }).isRequired,
+  filter: PropTypes.string.isRequired,
+  handleCountryChange: PropTypes.func.isRequired,
 };
 
 export default Country;
