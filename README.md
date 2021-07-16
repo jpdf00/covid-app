@@ -4,7 +4,7 @@
 
 > Small App Showing COVID-19 data.
 
-![screenshot](./src/assets/imgs/app-screenshot.png)
+![screenshot](./src/Assets/imgs/app-screenshot.png)
 
 This is a app built with React & Redux and can be used to show the COVID-19 data by country.
 You can filter for confirmed cases, deaths or recovered cases.
