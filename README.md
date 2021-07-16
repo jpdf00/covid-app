@@ -1,65 +1,74 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# COVID-19 Data App
 
-> One paragraph statement about the project.
+> Small App Showing COVID-19 data.
 
-![screenshot](./features/img/app_screenshot.png)
+![screenshot](./src/assets/imgs/app-screenshot.png)
 
-Additional description about the project and its features.
+This is a app built with React & Redux and can be used to show the COVID-19 data by country.
+You can filter for confirmed cases, deaths or recovered cases.
+Clicking on any country will give you the day by day data of that country.
+
+https://gist.github.com/jpdf00/e28684b7cc9acebe66b57fb29313c311
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Javascript, HTML, CSS.
+- React & Redux.
+- Webpack, Jest, Babel.
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[COVID-19 Data App](https://covid-app-jpdf00.herokuapp.com/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
+- On the top of the page there is a green button name "Code"
+- Click on the "Code" button.
+- A Menu will appear click in "Download Zip"
+- Save the zip file on your computer.
+- Extract the contents of the zip you just downloaded into a folder.
 
 ### Prerequisites
 
+- nodeJS.
+- A browser.
+
 ### Setup
 
-### Install
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm install`.
 
 ### Usage
 
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm start` (this should open a page in your default browser and the page should load).
+
 ### Run tests
 
-### Deployment
-
-
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm run test`.
 
 ## Authors
 
-👤 **Author1**
+👤 **João Paulo Dias França**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- GitHub: [@jpdf00](https://github.com/jpdf00)
+- Twitter: [@jpdf00](https://twitter.com/jpdf00)
+- LinkedIn: [João Paulo Dias França](https://www.linkedin.com/in/jpdf00/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/jpdf00/covid-app).
 
 ## Show your support
 
@@ -73,4 +82,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](./LICENSE) licensed.
