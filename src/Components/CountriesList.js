@@ -39,7 +39,9 @@ const CountriesList = () => {
 
   if (loading) {
     return (
-      <div className="processing" />
+      <div className="processing">
+        Processing
+      </div>
     );
   }
 

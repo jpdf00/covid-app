@@ -6,7 +6,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import rootReducer from '../Reducers/index';
 import Navbar from '../Components/Navbar';
 import CountriesList from '../Components/CountriesList';
-
+import DayliesList from '../Components/DayliesList';
 
 const initialState = {
   country: 'brazil',
@@ -79,7 +79,7 @@ it(`Navbar should Render the Filter Component`, () => {
   expect(btnName).toBeInTheDocument();
 });
 
-it(`Navbar should Render the Filter Component`, () => {
+it(`CountryList should Render be Loading`, () => {
   const { getByText } = render(
     <Provider store={mockStore}>
       <BrowserRouter >
@@ -87,6 +87,18 @@ it(`Navbar should Render the Filter Component`, () => {
       </BrowserRouter >
     </Provider>,
   );
-  const btnName = getByText(/Confirmed/i);
+  const btnName = getByText(/Processing/i);
+  expect(btnName).toBeInTheDocument();
+});
+
+it(`DayliesList should Render be Loading`, () => {
+  const { getByText } = render(
+    <Provider store={mockStore}>
+      <BrowserRouter >
+        <DayliesList />
+      </BrowserRouter >
+    </Provider>,
+  );
+  const btnName = getByText(/Processing/i);
   expect(btnName).toBeInTheDocument();
 });
