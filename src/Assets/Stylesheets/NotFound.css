@@ -5,3 +5,11 @@
   background-repeat: no-repeat;
   margin: 130px 10px 0 10px;
 }
+
+.processing {
+  background-image: url("https://http.cat/102");
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 130px 10px 0 10px;
+}
