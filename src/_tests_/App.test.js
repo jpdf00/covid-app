@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from '../Reducers/index';
 import Navbar from '../Components/Navbar';
 import CountriesList from '../Components/CountriesList';
@@ -55,48 +55,48 @@ const initialState = {
 
 const mockStore = configureStore({ reducer: { rootReducer }, initialState });
 
-it(`Navbar should Render Text`, () => {
+it('Navbar should Render Text', () => {
   const { getByText } = render(
     <Provider store={mockStore}>
-      <BrowserRouter >
+      <BrowserRouter>
         <Navbar />
-      </BrowserRouter >
+      </BrowserRouter>
     </Provider>,
   );
   const btnName = getByText(/Covid-19 Data/i);
   expect(btnName).toBeInTheDocument();
 });
 
-it(`Navbar should Render the Filter Component`, () => {
+it('Navbar should Render the Filter Component', () => {
   const { getByText } = render(
     <Provider store={mockStore}>
-      <BrowserRouter >
+      <BrowserRouter>
         <Navbar />
-      </BrowserRouter >
+      </BrowserRouter>
     </Provider>,
   );
   const btnName = getByText(/Confirmed/i);
   expect(btnName).toBeInTheDocument();
 });
 
-it(`CountryList should Render be Loading`, () => {
+it('CountryList should Render be Loading', () => {
   const { getByText } = render(
     <Provider store={mockStore}>
-      <BrowserRouter >
+      <BrowserRouter>
         <CountriesList />
-      </BrowserRouter >
+      </BrowserRouter>
     </Provider>,
   );
   const btnName = getByText(/Processing/i);
   expect(btnName).toBeInTheDocument();
 });
 
-it(`DayliesList should Render be Loading`, () => {
+it('DayliesList should Render be Loading', () => {
   const { getByText } = render(
     <Provider store={mockStore}>
-      <BrowserRouter >
+      <BrowserRouter>
         <DayliesList />
-      </BrowserRouter >
+      </BrowserRouter>
     </Provider>,
   );
   const btnName = getByText(/Processing/i);
