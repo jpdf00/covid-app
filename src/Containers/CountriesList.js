@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeGlobalData, changeCountryData, changeCountry } from '../Actions/index';
-import Earth from './Earth';
-import Country from './Country';
+import Earth from '../Components/Earth';
+import Country from '../Components/Country';
+import getData from '../util/asyncFetch';
 import '../Assets/Stylesheets/NotFound.css';
 
 const CountriesList = () => {
@@ -12,9 +13,10 @@ const CountriesList = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
+  const url = 'https://api.covid19api.com/summary';
 
   useEffect(() => {
-    fetch('https://api.covid19api.com/summary', { method: 'GET', redirect: 'follow' })
+    getData(url)
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
@@ -31,7 +33,7 @@ const CountriesList = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [dispatch]);
+  }, []);
 
   const handleCountryChange = (data) => {
     dispatch(changeCountry(data));

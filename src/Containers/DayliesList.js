@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { changeDayData } from '../Actions/index';
-import AllDays from './AllDays';
-import Dayly from './Dayly';
+import AllDays from '../Components/AllDays';
+import Dayly from '../Components/Dayly';
+import getData from '../util/asyncFetch';
 import '../Assets/Stylesheets/NotFound.css';
 
 const DayliesList = () => {
   const filter = useSelector((state) => state.filter);
-  const country = useSelector((state) => state.country);
+  const { id } = useParams();
   const days = useSelector((state) => state.dayData);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
-  const url = `https://api.covid19api.com/country/${country}`;
+  const url = `https://api.covid19api.com/country/${id}`;
 
   useEffect(() => {
-    fetch(url, { method: 'GET', redirect: 'follow' })
+    getData(url)
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
@@ -31,7 +33,7 @@ const DayliesList = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [dispatch]);
+  }, []);
 
   if (loading) {
     return (

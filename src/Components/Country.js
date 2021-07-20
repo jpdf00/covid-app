@@ -20,7 +20,7 @@ const Country = (props) => {
   }
 
   return (
-    <Link to="/Daylies" onClick={() => handleCountryChange(country.Slug)}>
+    <Link to={`${country.Slug}`} onClick={() => handleCountryChange(country.Slug)}>
       <div className="card">
         <h3 className="topTitle">{country.Country}</h3>
 
