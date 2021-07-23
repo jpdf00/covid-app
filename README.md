@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COVID-19 Data App
 
-## Available Scripts
+> Small App Showing COVID-19 data.
 
-In the project directory, you can run:
+![screenshot](./src/Assets/imgs/app-screenshot.png)
 
-### `npm start`
+This is a app built with React & Redux and can be used to show the COVID-19 data by country.
+You can filter for confirmed cases, deaths or recovered cases.
+Clicking on any country will give you the day by day data of that country.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://gist.github.com/jpdf00/e28684b7cc9acebe66b57fb29313c311
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- Javascript, HTML, CSS.
+- React & Redux.
+- Webpack, Jest, Babel.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+[COVID-19 Data App](https://covid-app-jpdf00.herokuapp.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run eject`
+- On the top of the page there is a green button name "Code"
+- Click on the "Code" button.
+- A Menu will appear click in "Download Zip"
+- Save the zip file on your computer.
+- Extract the contents of the zip you just downloaded into a folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- nodeJS.
+- A browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Setup
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm install`.
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm start` (this should open a page in your default browser and the page should load).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Run tests
 
-### Code Splitting
+- Open your comand prompt.
+- Go inside the folder you extracted from the zip file.
+- Type `npm run test`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+👤 **João Paulo Dias França**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- GitHub: [@jpdf00](https://github.com/jpdf00)
+- Twitter: [@jpdf00](https://twitter.com/jpdf00)
+- LinkedIn: [João Paulo Dias França](https://www.linkedin.com/in/jpdf00/)
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/jpdf00/covid-app).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Show your support
 
-### Deployment
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgments
 
-### `npm run build` fails to minify
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
